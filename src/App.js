@@ -1,7 +1,10 @@
-import logo from './logo.svg';
+//import logo from './logo.svg';
+import React, { Component } from 'react';
+import NavBar from './components/navbar';
+import Counters from './components/counters'
 import './App.css';
 
-function App() {
+/*function App() {
   return (
     <div className="App">
       <header className="App-header">
@@ -22,4 +25,18 @@ function App() {
   );
 }
 
+export default App;*/
+class App extends Component {
+  render() { 
+    return (
+      <React.Fragment> 
+        <NavBar />
+        <main className="container">
+          <Counters />
+        </main>
+      </React.Fragment>
+     );
+  }
+}
+ 
 export default App;
