@@ -1,13 +1,22 @@
 import React, { Component } from 'react'
 
 class Counter extends Component {
-    // renderTags() {
-    //     if(this.state.tags.length === 0) return <p>There are no tags!</p>;
+    componentDidUpdate(prevProps, prevState) {
+        console.log('prevProps', prevProps);
+        console.log('prevState', prevState);
 
-    //     return <ul>{this.state.tags.map(tag => <li key={tag}>{tag}</li>)}</ul>
-    // }
+        if(prevProps.counter.value !== this.props.counter.value){
+
+        }
+    }
+
+    componentDidMount() {
+        console.log('Counter - Unmount');
+    }
 
     render() {  
+        console.log('Counter - Rendered');
+
         return (
         <div>
             <span className={this.getBadgeClasses()}>{this.formatValue()}</span>
